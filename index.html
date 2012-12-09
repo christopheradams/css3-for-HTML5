@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>345 - CSS3 (for) HTML5</title>
+
+		<meta name="description" content="345: CSS4 for HTML5">
+		<meta name="author" content="Christopher Adams">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.min.css">
+		<link rel="stylesheet" href="reveal/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>345</h1>
+					<h3>CSS3 (for) HTML5</h3>
+					<p>
+						<small>by <a href="http://chris.raysend.com">Christopher Adams</a> / <a href="http://twitter.com/christopheradam">@christopheradam</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What's in CSS3?</h2>
+					<p>
+						(hint: a lot)
+					</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Evolving Standards</h2>
+						<p>
+							CSS3 contains over 50 modules! <a href="#" class="navigate-down">Let's see!</a>
+						</p>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Completed <span style="font-family:sans-serif;">😃</span></h2>
+						<p class="fragment">Color, Namespaces, Selectors, Media Queries</p>
+					</section>
+					<section>
+						<h2>Stable <span style="font-family:sans-serif;">😐</span></h2>
+						<p class="fragment">Style Attributes</p>
+					</section>
+					<section>
+						<h2>Testing <span style="font-family:sans-serif;">😉</span></h2>
+						<p class="fragment">Backgrounds and Borders, Image Values and Replaced Content, Marquee, Multi-column Layout, Speech, Values and Units, Mobile Profile, TV Profile</p>
+					</section>
+					<section>
+						<h2>Refining <span style="font-family:sans-serif;">😛</span></h2>
+						<p class="fragment">Animations, Flexible Box Layout, Text, Fragmentation, Transforms, Transitions, Print Profile</p>
+					</section>
+					<section>
+						<h2>Revising <span style="font-family:sans-serif;">😋</span></h2>
+						<p class="fragment">Conditional, Fonts, Paged Media, Basic User Interface, Writing Modes, CSSOM View</p>
+					</section>
+					<section>
+						<h2>Exploring <span style="font-family:sans-serif;">😎</span></h2>
+						<p class="fragment">Cascading and Inheritance, Device Adaptation, Exclusions and Shapes, Generated Content for Paged Media, Grid Layout, (Grid) Template Layout, Line Grid, Lists Level, Positioned Layout, Presentation Levels, Regions, Tables, Selectors, Object Model, Compositing and Blending, Filter Effects, Masking, Box Alignment, Text Decoration, Intrinsic & Extrinsic Sizing, Counter Styles</p>
+					</section>
+					<section>
+						<h2>Rewriting <span style="font-family:sans-serif;">😵<span></h2>
+						<p class="fragment">CSS Basic Box Model, Generated Content, Line Layout, Ruby, Syntax, Backgrounds and Borders </p>
+					</section>
+					<section>
+						<h2>Abandoned <span style="font-family:sans-serif;">😥</span></h2>
+						<p class="fragment">Behavioral Extensions, Hyperlink Presentation, Grid Positioning</p>
+					</section>
+					<section>
+						<h2>Find out more</h2>
+						<p><a href="http://www.w3.org/Style/CSS/current-work">www.w3.org/Style/CSS/current-work</a></p>
+						<a href="#/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+				<section>
+					<h2>Do it with &lt;style&gt;</h2>
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+				<section>
+					<h2>Do it with &lt;style&gt;</h2>
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+/* Rules */
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+				<section>
+					<h2>Do it with &lt;style&gt;</h2>
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+/* Rule */
+
+#selector {
+
+}
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+				<section>
+					<h2>Do it with &lt;style&gt;</h2>
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+/* Rule */
+
+#selector {
+	property: value;
+}
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+				<section>
+					<h2>Do it with &lt;style&gt;</h2>
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+/* Rule */
+
+#selector:pseudo-class {
+	property: value;
+}
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Come On My Selector</h2>
+					<p>
+						New selectors in CSS3.
+					</p>
+				</section>
+				<section>
+					
+					<style>
+						
+					#box {
+						display: block;
+						height: 100px;
+						width: 100%;
+						background-color: gray;
+						padding: 25px;
+					}
+					
+					.mini {
+						display: inline-block;
+						height: 100px;
+						width: 140px;
+						background-color: lightskyblue;
+					}
+					
+					.children .mini:first-child {
+						
+						background-color: hotpink;
+					}
+					
+					</style>
+					
+					<h2>Sweet Child O' Mine</h2>
+						<div id="box" class="children">
+							<div class="left mini"></div>
+							<div class="mini"></div>
+							<div class="right mini"></div>
+						</div>
+					
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&lt;style&gt;
+
+#big-box{
+	background-color: gray;
+}
+
+.small-box{
+	background-color: lightskyblue;
+}
+					
+.small-box:first-child {			
+	background-color: hotpink;
+}
+
+&lt;/style&gt;
+						</code></pre>
+						
+					</p>
+				</section>
+				
+				<section>
+
+				
+					<p><code>E:nth-child(n)</code></p>
+					<p><code>E:nth-last-child(n)</code></p>
+					<p><code>E:nth-of-type(n)</code></p>
+					<p><code>E:nth-last-of-type(n)</code></p>
+					<p><code style="color: hotpink;">E:first-child</code></p>
+					<p><code>E:last-child</code></p>
+					<p><code>E:first-of-type</code></p>
+					<p><code>E:last-of-type</code></p>
+					<p><code>E:only-child</code></p>
+					<p><code>E:only-of-type</code></p>
+					<p><code>E:empty</code></p>
+					
+				</section>
+				
+				<style>
+				
+				.right.mini {
+					float: right;
+					display: block;
+				}
+				
+				.left.mini {
+					display: block;
+					float: left;
+				}
+				
+				.tobe .mini:not(.left) {
+					background-color: hotpink;
+				}
+				
+				
+				</style>
+				
+				<section>
+					
+					<h2>To Be, or :Not() to Be</h2>
+						<div id="box" class="tobe">
+							<div class="left mini"></div>
+							<div class="middle mini"></div>
+							<div class="right mini"></div>
+						</div>
+					
+					<p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">&lt;style&gt;
+
+#big-box{ background-color: gray; }
+
+.small-box{ background-color: lightskyblue; }
+
+.small-box.left { float: left; }
+.small-box.right { float: right; }
+					
+.small-box:not(.left) { background-color: hotpink; }
+
+&lt;/style&gt;
+						</code></pre>
+						
+				</section>
+			</section>
+			
+				<section>
+					<h2>Properties</h2>
+					<p>
+						Over 100 new properties in CSS3!
+					</p>
+					<p>(but first a warning)</p>
+				</section>
+					<section data-state="alert">
+						<h2>Vendor Prefixes</h2>
+						<p><code>-moz, -webkit, -ms, -o</code></p>
+					</section>
+					<section data-state="soothe">
+						<h2>Solution?</h2>
+
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">&lt;style&gt;
+				
+/* Use prefixes if you must... */
+.box {			
+     -o-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+   -moz-transition: all 1s linear;
+-webkit-transition: all 1s linear;
+
+/* ...but always include the un-prefixed version */
+        transition: all 1s linear;
+	}
+&lt;/style&gt;
+						</code></pre>
+						
+						<p><a href="http://slides.html5rocks.com/#css-columns">Can we see some examples?</a></p>
+						<p>
+							<a href="http://playground.html5rocks.com/#rounded_corners">Can we play?</a>
+						</p>
+					</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Christopher Adams / chris.raysend.com</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
